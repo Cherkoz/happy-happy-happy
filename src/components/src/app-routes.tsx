@@ -8,6 +8,7 @@ export function AppRoutes() {
       <Routes>
         <Route element={<Layout />}>
           <Route index path={'/'} element={<MainPage />} />
+          <Route index path={'*'} element={<MainPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

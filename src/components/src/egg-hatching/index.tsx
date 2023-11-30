@@ -3,7 +3,9 @@ import './style.css';
 
 export function EggHatching() {
   const [clicked, setClicked] = useState(false);
-  const audioRef = useRef(new Audio('./assets/music/happy.mp3'));
+  const audioRef = useRef(
+    new Audio('https://cherkoz.github.io/happy-happy-happy/assets/music/happy.mp3')
+  );
 
   const handleClick = () => {
     audioRef.current.loop = true;
@@ -31,7 +33,7 @@ export function EggHatching() {
       </div>
       <div className={'shadow'}></div>
       <div className={'text'}>
-        <img src={'./assets/img/lera.png'} />
+        <img src={'https://cherkoz.github.io/happy-happy-happy/assets/img/lera.png'} />
       </div>
     </div>
   );
