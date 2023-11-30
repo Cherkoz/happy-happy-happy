@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/happy-happy-happy/static/css/main.0268b31c.css",
+    "main.js": "/happy-happy-happy/static/js/main.7bf52624.js",
+    "index.html": "/happy-happy-happy/index.html",
+    "main.0268b31c.css.map": "/happy-happy-happy/static/css/main.0268b31c.css.map",
+    "main.7bf52624.js.map": "/happy-happy-happy/static/js/main.7bf52624.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0268b31c.css",
+    "static/js/main.7bf52624.js"
+  ]
+}
