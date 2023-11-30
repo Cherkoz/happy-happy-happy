@@ -1,0 +1,7 @@
+{
+  "name": "@my-app/pages",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "NDA",
+  "private": true
+}

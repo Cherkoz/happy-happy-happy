@@ -1,0 +1,176 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #55ceaf;
+}
+
+#easter-egg-animation {
+  position: relative;
+  cursor: pointer;
+}
+
+.easter-egg {
+  position: relative;
+  transform-origin: bottom;
+  animation: wiggle 2s forwards;
+}
+
+.egg {
+  position: relative;
+  width: 160px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 0% 100% 50% 50% / 0% 0% 100% 100%;
+  top:90px;
+}
+
+.egg-top {
+  position: absolute;
+  width: 160px;
+  height: 120px;
+  background-color: #fff;
+  border-radius: 50% 50% 70% 30% / 100% 100% 0% 0%;
+  top:-44px;
+  left:0;
+  transform-origin: left;
+  animation: open .5s ease forwards 2s;
+}
+
+@keyframes open {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(-220deg);top:0;}
+}
+
+.egg:before, .egg:after, .egg-top:before, .shell:before {
+  content:"";
+  position: absolute;
+  border-style: solid;
+}
+
+.egg:before {
+  border-color: transparent transparent #fff transparent;
+  border-width: 0 20px 20px 0;
+  top: -20px;
+}
+
+.egg:after {
+  border-color: transparent transparent #fff transparent;
+  border-width: 0 0 20px 20px;
+  top: -20px;
+  left: 140px;
+}
+
+.egg-top:before {
+  border-color: #fff transparent transparent transparent;
+  border-width: 20px 20px 0 20px;
+  top:119px;
+}
+
+.shell-top, .shell-top:before, .shell-top:after {
+  position: absolute;
+  border-style: solid;
+  border-color: #fff transparent transparent transparent;
+  border-width: 20px 20px 0 20px;
+}
+
+.shell-top {
+  left:40px;
+  top:119px;
+}
+
+.shell-top:before, .shell-top:after {
+  content:"";
+  top:-20px;
+}
+
+.shell-top:before {
+  left:20px;
+}
+
+.shell-top:after {
+  left:60px;
+}
+
+.shell {
+  position: absolute;
+}
+
+.shell:before {
+  border-color: transparent transparent #f3f5ee transparent;
+  border-width: 0 20px 20px 20px;
+  top:-19px;
+  left:20px;
+  filter: drop-shadow(40px 0 #f1f3ed) drop-shadow(40px 0 #fff);
+}
+
+.egg-top:after {
+  content:"";
+  position: absolute;
+  background-color: #f3f5ee;
+  width:25px;
+  height:60px;
+  border-radius:50%;
+  transform: rotate(-27deg);
+  top:30px;
+  left:115px;
+}
+
+.shell:after {
+  content:"";
+  position: absolute;
+  border-radius:50%;
+  width:10px;
+  height:10px;
+  background-color: #f1f3ed;
+  top: 30px;
+  left:20px;
+  box-shadow: 30px 25px #f1f3ed, 60px 0 #f1f3ed, 90px 20px #f1f3ed, 120px -5px #f1f3ed, 30px -25px #f1f3ed, 90px -25px #f1f3ed;
+}
+
+.shadow {
+  position: absolute;
+  width:220px;
+  height:30px;
+  background-color: rgba(0,0,0,.1);
+  border-radius:50%;
+  z-index:-1;
+  top:147px;
+  left:-27px;
+}
+
+@keyframes wiggle {
+  0% {transform: rotate(0);}
+  20% {transform: rotate(-20deg);}
+  40% {transform: rotate(20deg);}
+  60% {transform: rotate(-20deg);}
+  80% {transform: rotate(20deg);}
+  85% {transform: rotate(-20deg);}
+  90% {transform: rotate(20deg);}
+  95% {transform: rotate(-20deg);}
+  99% {transform: rotate(20deg);}
+  100% {transform: rotate(0);}
+}
+
+.text {
+  opacity: 0;
+  position: absolute;
+  top: -85px;
+  left: 0;
+  width: 160px;
+
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  z-index: -1;
+  transform-origin: bottom;
+  animation: up .5s ease forwards 2s;
+}
+
+@keyframes up {
+  0% {}
+  100% {
+    opacity: 1;
+  }
+}
