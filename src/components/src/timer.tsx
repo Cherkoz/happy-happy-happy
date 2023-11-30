@@ -58,9 +58,15 @@ export function Timer({ targetDate }: CountdownTimerProps) {
   const formattedSeconds = `${timeLeft.seconds.toString().padStart(2, '0')}`;
 
   const timerComponent: JSX.Element = (
-    <div className="flex text-center text-[68px]">
-      <div className="w-[110px]">{formattedMinutes}</div> :{' '}
-      <div className="w-[110px]">{formattedSeconds}</div>
+    <div>
+      <div className={' text-center'}>
+        {timeLeft.days > 0 && <>{timeLeft.days}d </>}
+        {timeLeft.hours > 0 && <>{timeLeft.hours}h</>}
+      </div>
+      <div className="flex text-center text-[68px]">
+        <div className="w-[110px]">{formattedMinutes}</div> :{' '}
+        <div className="w-[110px]">{formattedSeconds}</div>
+      </div>
     </div>
   );
 
